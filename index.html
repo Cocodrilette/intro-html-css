@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduccion a HTML y CSS</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Introducción a HTML y CSS</h1>
+    </header>
+
+    <section id="tabla-de-contenidos">
+        <h1>Tabla de contenidos</h1>
+        <ol>
+            <li><a href="#introduccion-a-html">Introducción a HTML</a></li>
+            <ul>
+                <li><a href="#que-es-y-como-funciona">¿Qué es y cómo funciona?</a></li>
+                <li><a href="#elementos-etiquetas-y-atributos">Elementos, etiquetas y atributos</a></li>
+                <li>Estructura básica HTML (doctype, head, body).</li>
+            </ul>
+            <li><a href="#texto-y-encabezados">Texto y encabezados</a></li>
+            <ul>
+                <li>Headings (h1-h6)</li>
+                <li>Parrafos y saltos de linea</li>
+            </ul>
+            <li><a href="#listas">Listas</a></li>
+            <ul>
+                <li>Listas ordenadas</li>
+                <li>Listas no-ordenadas</li>
+            </ul>
+            <li><a href="#imagenes">Imagenes</a></li>
+            <ul>
+                <li>Añadir imagenes a una página</li>
+            </ul>
+            <li><a href="#enlances">Enlaces (links)</a></li>
+            <ul>
+                <li>Enlaces internos</li>
+                <li>Enlaces externos</li>
+            </ul>
+            <li><a href="introduccion-a-css">Introduccion a CSS</a></li>
+            <ul>
+                <li>¿Qué es y cómo funciona?</li>
+                <li>Vinculando el CSS con el HTML</li>
+            </ul>
+            <li><a href="#selectores">Selectores</a></li>
+            <ul>
+                <li>Selector de tipo</li>
+                <li>Selector de clase</li>
+                <li>Selector de ID</li>
+            </ul>
+            <li><a href="propiedades-en-css">Propiedades en CSS</a></li>
+            <ul>
+                <li>Propiedades de texto</li>
+                <li>Propiedades de fondo</li>
+                <li>Propiedades de tipografia</li>
+            </ul>
+            <li><a href="#buenas-practicas">Buenas prácticas</a></li>
+            <li><a href="#lecturas-adicionales">Lecturas adicionales</a></li>
+        </ol>
+    </section>
+
+    <section id="introduccion-a-html">
+        <h2>Introduccion a HTML</h2>
+        <h3 id="que-es-y-como-funciona">¿Qué es y cómo funciona?</h3>
+        <p>
+            HTML (o HyperText Markup Languaje) es un lenguaje de marcado que se utiliza para crear páginas web. HTML
+            no es un lenguaje de
+            programación, sino un lenguaje de marcado que se utiliza para estructurar el contenido de la página que
+            estamos creando, además de darle <a href="https://www.w3schools.com/html/html5_semantic_elements.asp"
+                target="_blank">sentido y significado</a> a ese contenido.
+        </p>
+        <h3 id="elementos-etiquetas-y-atributos">Elementos, etiquetas y atributos</h3>
+        <p>
+            Un documento HTML está compuesto por elementos, que son las partes que componen una página web. Cada
+            elemento tiene
+            una
+            etiqueta de apertura y una etiqueta de cierre. La etiqueta de apertura se escribe con el nombre del
+            elemento
+            entre corchetes angulares (<>) y la etiqueta de cierre se escribe con el nombre del elemento entre
+                corchetes
+                angulares y una barra (/) antes del nombre del elemento (</>). Por ejemplo, el elemento
+            <strong>strong</strong>
+            se escribe así: <code>&lt;strong&gt;</code> y su etiqueta de cierre es así:
+            <code>&lt;/strong&gt;</code>.
+        </p>
+        <media>
+            <img src="./assets/html-elem-tags.png" alt="Anamtomia de un elemento HTML">
+            <figcaption>Figura 1. Anatomía de un elemento HTML (tomado de <a
+                    href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics#anatomy_of_an_html_element"
+                    target="_blank">mdn web docs</a>)</figcaption>
+        </media>
+        <p>
+            Aunque hay muchas etiquetas por defecto en HTML (y lo recomendable es usarlas siempre que se pueda) es
+            posible crear elementos a partir de etiquetas con el nombre que queramos. Por ejemplo, un elemento
+            <code>&lt;customTag&gt;My own content&lt;/customTag&gt;</code> funcionaría de la misma forma que
+            cualquier otro elemento, pero estamos perdiendo el significado que tienen las etiquetas por defecto para
+            los motores de búsqueda.
+        </p>
+        <p>
+            Los elementos también pueden contener atributos.
+        </p>
+        <media>
+            <img src="./assets/html-atribute.png" alt="Atributos de un elemento HTML">
+            <figcaption>Figura 2. Atributos de un elemento HTML (tomado de <a
+                    href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics#anatomy_of_an_html_element"
+                    target="_blank">mdn web docs</a>)</figcaption>
+        </media>
+        <p>
+            Los atributos son propiedades que se le pueden asignar a un elemento. Por ejemplo, el elemento
+            <code>&lt;a&gt;</code> tiene un atributo llamado <code>href</code> que se utiliza para indicar el
+            destino del enlace. El elemento <code>&lt;img&gt;</code> tiene un atributo llamado <code>src</code>
+            que se utiliza para indicar la ruta de la imagen que se va a mostrar.
+        </p>
+    </section>
+    <section id="texto-y-encabezados">
+        <h2>Texto y encabezados</h2>
+    </section>
+    <section id="listas">
+        <h2>Listas</h2>
+    </section>
+    <section id="imagenes">
+        <h2>Imagenes</h2>
+    </section>
+    <section id="enlaces">
+        <h2>Enlaces (links)</h2>
+    </section>
+    <section id="introduccion-a-css">
+        <h2>Introduccion a CSS</h2>
+    </section>
+    <section id="selectores">
+        <h2>Selectores</h2>
+    </section>
+    <section id="propiedades-en-css">
+        <h2>Propiedades en CSS</h2>
+    </section>
+    <section id="buenas-practicas">
+        <h2>Buenas prácticas</h2>
+    </section>
+    <section id="lecturas-adicionales">
+        <h2>Lecturas adicionales</h2>
+    </section>
+
+</body>
+
+</html>
