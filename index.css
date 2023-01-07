@@ -1,9 +1,10 @@
 :root {
-  --color-bg: #101010;
+  --color-bg: #151515;
   --color-bg-muted: #202020;
   --font-primary: #f0f0f0;
   --font-code: #c80000;
-  --color-terciary: #d7f5ef;
+  --font-link: #7777ff;
+  --color-terciary: #bcb5ff;
   --font-family-primary: "Roboto", sans-serif;
   --font-family-code: monospace;
 }
@@ -21,6 +22,7 @@ html {
   background-color: var(--color-bg);
   color: var(--font-primary);
   font-family: var(--font-family-primary);
+  scroll-behavior: smooth;
 }
 
 body {
@@ -42,6 +44,7 @@ code {
 
 h1 {
   margin-top: 3.5rem;
+  font-size: 2.5rem;
 }
 
 h1:before {
@@ -50,6 +53,7 @@ h1:before {
 
 h2 {
   margin-top: 3rem;
+  font-size: 2rem;
 }
 
 h2:before {
@@ -58,6 +62,7 @@ h2:before {
 
 h3 {
   margin-top: 2.5rem;
+  font-size: 1.5rem;
 }
 
 h3:before {
@@ -69,7 +74,7 @@ li {
 }
 
 p {
-  line-height: 1.3rem;
+  line-height: 1.8rem;
 }
 
 p > span {
@@ -94,16 +99,14 @@ pre > red {
 }
 
 a {
-  color: var(--font-primary);
-  text-decoration: none;
-  border-bottom: 2px solid var(--color-terciary);
+  color: var(--font-link);
+  text-decoration: subline;
   transition: all 0.2s ease-in-out;
   padding: 1px;
 }
 
 a:hover {
-  color: black;
-  background-color: var(--color-terciary);
+  text-decoration: none;
 }
 
 img {
@@ -120,8 +123,7 @@ div {
   background-color: transparent;
   font-size: 2rem;
   position: sticky;
-  bottom: 1rem;
-  right: 1rem;
+  bottom: 0.8rem;
 }
 
 div > a {
@@ -130,10 +132,39 @@ div > a {
   border: none;
   padding: 0;
   margin: 0;
+  opacity: 0.4;
+  transition: opacity 0.2s linear;
 }
 
 div > a:hover {
-  background-color: var(--color-bg);
+  background-color: transparent;
+  opacity: 1;
+}
+
+media {
+  margin: 2rem 0;
+}
+
+callout,
+important {
+  display: flex;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+callout {
+  background-color: var(--color-bg-muted);
+  border-left: 6px solid #f0f0f0;
+}
+
+important {
+  background-color: #ffffdf;
+  color: #000000;
+  border-left: 6px solid #f0f0f0;
+}
+
+important > p > strong {
+  font-size: 1.3rem;
 }
 
 @media screen and (max-width: 400px) {

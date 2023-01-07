@@ -23,7 +23,7 @@
     <section id="tabla-de-contenidos">
         <h1>Tabla de contenidos</h1>
         <ol>
-            <li><a href="#introduccion-a-html">Introducción a HTML</a></li>
+            <li type="circle"><a href="#introduccion-a-html">Introducción a HTML</a></li>
             <ul>
                 <li><a href="#que-es-y-como-funciona">¿Qué es y cómo funciona?</a></li>
                 <li><a href="#elementos-etiquetas-y-atributos">Elementos, etiquetas y atributos</a></li>
@@ -35,23 +35,29 @@
             <li><a href="#enlaces">Enlaces (links)</a></li>
             <li><a href="#introduccion-a-css">Introduccion a CSS</a></li>
             <ul>
-                <li>¿Qué es y cómo funciona?</li>
-                <li>Vinculando el CSS con el HTML</li>
+                <li><a href="#que-es-y-como-funciona">¿Qué es y cómo funciona?</a></li>
+                <li><a href="#vinculando-css-html">Vinculando el CSS con el HTML</a></li>
             </ul>
             <li><a href="#selectores">Selectores</a></li>
             <ul>
-                <li>Selector de tipo</li>
-                <li>Selector de clase</li>
-                <li>Selector de ID</li>
+                <li><a href="#selector-de-tipo">Selector de tipo</a></li>
+                <li><a href="#selector-de-clase">Selector de clase</a></li>
+                <li><a href="#selector-de-id">Selector de ID</a></li>
+                <li><a href="#selector-de-atributo">Selector de atributo</a></li>
+                <li><a href="#selector-de-pseudo-clase">Selector de pseudo-clase</a></li>
+                <li><a href="#selector-de-pseudo-elemento">Selector de pseudo-elemento</a></li>
+                <li><a href="#otros-selectores">Otros selectores</a></li>
+
             </ul>
             <li><a href="propiedades-en-css">Propiedades en CSS</a></li>
             <ul>
-                <li>Propiedades de texto</li>
-                <li>Propiedades de fondo</li>
-                <li>Propiedades de tipografia</li>
+                <li><a href="#propiedades-de-texto">Propiedades de texto</a></li>
+                <li><a href="#propiedades-de-fondo">Propiedades de fondo</a></li>
+                <li><a href="#animaciones">Animaciones</a></li>
+                <li><a href="#otras-propiedades">Otras propiedades</a></li>
             </ul>
             <li><a href="#buenas-practicas">Buenas prácticas</a></li>
-            <li><a href="#lecturas-adicionales">Lecturas adicionales</a></li>
+            <li><a href="#recursos-adicionales">Recursos adicionales</a></li>
         </ol>
     </section>
 
@@ -109,12 +115,12 @@
         </p>
         <p>Los atributos que establecen un valor siempre deben tener:</p>
         <ul>
-            <li>Un espacio entre ellos y el nombre del elemento (o entre el atributo previo si tiene uno o más
-                atributos).</li>
+            <li>Un espacio entre ellos y el nombre del elemento (o entre el atributo previo si tiene más de un
+                atributo).</li>
             <li>Un signo igual (=).</li>
             <li>El valor del atributo entre comillas dobles.</li>
         </ul>
-        <h3 id="estructura-basica">Estructura básica HTML (doctype, head, body..).</h3>
+        <h3 id="estructura-basica">Estructura básica HTML (doctype, head, body...).</h3>
         <p>
             Cada documento HTML debe comenzar con el <a href="https://developer.mozilla.org/en-US/docs/Glossary/Doctype"
                 target="_blank"><strong>doctype</strong></a>, que es una declaración que indica al navegador que
@@ -152,8 +158,8 @@
             página se renderizará como máximo en el ancho de la pantalla del dispositivo en donde se esta visualizando.
         </p>
 
-
     </section>
+
     <section id="texto-y-encabezados">
         <h2>Texto y encabezados</h2>
 
@@ -177,10 +183,11 @@
         </p>
 
         <p>
-            Los elementos <code>&lt;strong&gt;</code> y <code>&lt;em&gt;</code> <strong>se utilizan para resaltar
-                texto</strong>.
-            El elemento <code>&lt;strong&gt;</code> indica que el texto es importante, mientras que el elemento
-            <code>&lt;em&gt;</code> indica que el texto es enfatizado.
+            Los elementos <code>&lt;strong&gt;</code> y <code>&lt;em&gt;</code> se utilizan para resaltar
+            texto.
+            El elemento <code>&lt;strong&gt;</code> indica que el <strong>texto es importante</strong>, mientras que el
+            elemento
+            <code>&lt;em&gt;</code> indica que el <em>texto es enfatizado</em>.
         </p>
 
         <p>
@@ -210,7 +217,7 @@
         </p>
 
         <p>
-            Los elementos <code>&lt;del&gt;</code> y <code>&lt;ins&gt;</code> se utilizan para definir texto
+            Los elementos <code>&lt;del&gt;</code> e <code>&lt;ins&gt;</code> se utilizan para definir texto
             <del>eliminado</del> y texto <ins>insertado</ins>, respectivamente.
         </p>
 
@@ -270,8 +277,12 @@ fn main() {
         </p>
 
         <p>
-            Los elementos <code>&lt;ul&gt;</code> y <code>&lt;ol&gt;</code> pueden tener atributos <code>type</code>
-            y <code>start</code> para definir el tipo de marcador y el número de inicio, respectivamente.
+            Los elementos <code>&lt;ul&gt;</code> y <code>&lt;ol&gt;</code> pueden tener atributos
+            <code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li#attr-type" target="_blank">type</a></code>
+            y
+            <code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li#attr-value" target="_blank">value</a></code>
+            para definir el tipo de marcador y el valor de ese elemento en la lista,
+            respectivamente.
         </p>
     </section>
 
@@ -312,13 +323,400 @@ fn main() {
 
     <section id="introduccion-a-css">
         <h2>Introduccion a CSS</h2>
+
+        <h3 id="que-es-y-como-funciona">¿Qué es y cómo funciona?</h3>
+
+        <p>
+            <abbr title="Cascading Style Sheets">CSS</abbr> es un lenguaje de estilos que se utiliza para definir la
+            apariencia de
+            documentos HTML. CSS se utiliza para definir colores, fuentes, tamaños, márgenes, rellenos, etc. de
+            elementos HTML.
+        </p>
+
+        <p>
+            CSS se utiliza para separar el contenido de la presentación. Esto significa que el contenido de una
+            página web se define en HTML, mientras que la apariencia se define en CSS.
+        </p>
+
+        <h3 id="vinculando-css-html">Vinculando el CSS con el HTML</h3>
+
+        <p>
+            Para vincular el CSS con el HTML, se utiliza la etiqueta <code>&lt;link&gt;</code> en el elemento
+            <code>&lt;head&gt;</code> del HTML. El atributo <code>href</code> de la etiqueta <code>&lt;link&gt;</code>
+            define la ruta del archivo CSS, mientras que el atributo <code>rel</code> define el tipo de relación
+            entre el HTML y el CSS.
+        </p>
+
+        <pre id="link-example">
+&lt;<green>head</green>&gt;
+...
+    &lt;<green>link</green> <red>href</red>=<green>"path/to/css"</green> <red>rel</red>=<green>"stylesheet"</green>&gt;
+...
+&lt;/<green>head</green>&gt;</pre>
+
+        <p>
+            También se puede vincular el CSS con el HTML utilizando la etiqueta <code>&lt;style&gt;</code> en el
+            elemento <code>&lt;head&gt;</code> del HTML. El contenido de la etiqueta <code>&lt;style&gt;</code> es
+            el código CSS.
+        </p>
+
+        <pre id="style-example">&lt;<green>head</green>&gt;
+    &lt;<green>style</green>&gt;
+        <red>/* Código CSS */</red>
+    &lt;/<green>style</green>&gt;
+&lt;/<green>head</green>&gt;</pre>
+
+        <p>
+            También se pueden definir estilos en linea, es decir, en los atributos del elemento HTML. Aunque este forma
+            de utilizar el código CSS es poco recomendada porque genera un HTML dificil de leer, depurar y mantener.
+        </p>
+
+        <pre
+            id="inline-example">&lt;<green>h1</green> <red>style</red>=<green>"color: red"</green>&gt;Título&lt;/<green>h1</green>&gt;</pre>
+
+
     </section>
     <section id="selectores">
         <h2>Selectores</h2>
+
+        <h3 id="selector-de-tipo">Selector de tipo</h3>
+
+        <p>
+            El selector de tipo selecciona todos los elementos de un tipo específico. Por ejemplo, el selector
+            <code>h1</code> selecciona todos los elementos <code>&lt;h1&gt;</code>.
+        </p>
+
+        <pre id="selector-de-tipo-example">
+<green>h1</green> {
+    <red>color</red>: <green>red</green>;
+}</pre>
+
+        <h3 id="selector-de-id">Selector de ID</h3>
+
+        <p>
+            El selector de ID selecciona un elemento con un ID específico. Por ejemplo, el selector
+            <code>#titulo</code> selecciona el elemento con el ID <code>titulo</code>.
+        </p>
+
+        <pre id="selector-de-id-example">
+<green>#titulo</green> {
+    <red>color</red>: <green>red</green>;
+}</pre>
+
+        <h3 id="selector-de-clase">Selector de clase</h3>
+
+        <p>
+            El selector de clase selecciona todos los elementos con una clase específica. Por ejemplo, el selector
+            <code>.titulo</code> selecciona todos los elementos con la clase <code>titulo</code>.
+        </p>
+
+        <pre id="selector-de-clase-example">
+<green>.titulo</green> {
+    <red>color</red>: <green>red</green>;
+}</pre>
+
+        <h3 id="selector-de-atributo">Selector de atributo</h3>
+
+        <p>
+            El selector de atributo selecciona todos los elementos que tienen un atributo específico. Por ejemplo, el
+            selector <code>[href]</code> selecciona todos los elementos que tienen el atributo <code>href</code>.
+        </p>
+
+        <pre id="selector-de-atributo-example">
+<green>[href]</green> {
+    <red>color</red>: <green>red</green>;
+}</pre>
+
+        <h3 id="selector-de-pseudoclase">Selector de pseudoclase</h3>
+
+        <p>
+            El selector de pseudoclase selecciona todos los elementos que cumplen una condición específica. Por
+            ejemplo, el selector <code>:hover</code> selecciona todos los elementos que están siendo apuntados por el
+            cursor del mouse.
+        </p>
+
+        <pre id="selector-de-pseudoclase-example">
+<green>:hover</green> {
+    <red>color</red>: <green>red</green>;
+}</pre>
+
+        <h3 id="selector-de-pseudoelemento">Selector de pseudoelemento</h3>
+
+        <p>
+            El selector de pseudoelemento selecciona una parte específica de un elemento. Por ejemplo, el selector
+            <code>::first-letter</code> selecciona la primera letra de un elemento.
+        </p>
+
+        <pre id="selector-de-pseudoelemento-example">
+<green>::first-letter</green> {
+    <red>color</red>: <green>red</green>;
+}</pre>
+
+        <h3 id="otros-selectores">Otros selectores</h3>
+
+        <h3 id="selector-de-atributo-con-valor">Selector de atributo con valor</h3>
+
+        <p>
+            El selector de atributo con valor selecciona todos los elementos que tienen un atributo específico con un
+            valor específico. Por ejemplo, el selector <code>[href="https://www.google.com"]</code> selecciona todos
+            los elementos que tienen el atributo <code>href</code> con el valor <code>https://www.google.com</code>.
+        </p>
+
+        <pre id="selector-de-atributo-con-valor-example">
+<green>[href="https://www.google.com"]</green> {
+    <red>color</red>: <green>red</green>;
+}</pre>
+
+        <h3 id="selector-de-atributo-que-contiene-valor">Selector de atributo que contiene valor</h3>
+
+        <p>
+            El selector de atributo que contiene valor selecciona todos los elementos que tienen un atributo específico
+            que contiene un valor específico. Por ejemplo, el selector <code>[href*="google"]</code> selecciona todos
+            los elementos que tienen el atributo <code>href</code> que contiene el valor <code>google</code>.
+        </p>
+
+        <pre id="selector-de-atributo-que-contiene-valor-example">
+<green>[href*="google"]</green> {
+    <red>color</red>: <green>red</green>;
+}</pre>
+
+        <h3 id="selector-de-atributo-que-inicia-con-valor">Selector de atributo que inicia con valor</h3>
+
+        <p>
+            El selector de atributo que inicia con valor selecciona todos los elementos que tienen un atributo
+            específico que inicia con un valor específico. Por ejemplo, el selector <code>[href^="https"]</code>
+            selecciona todos los elementos que tienen el atributo <code>href</code> que inicia con el valor
+            <code>https</code>.
+        </p>
+
+        <pre id="selector-de-atributo-que-inicia-con-valor-example">
+<green>[href^="https"]</green> {
+    <red>color</red>: <green>red</green>;
+}</pre>
+
+        <h3 id="selector-de-atributo-que-termina-con-valor">Selector de atributo que termina con valor</h3>
+
+        <p>
+            El selector de atributo que termina con valor selecciona todos los elementos que tienen un atributo
+            específico que termina con un valor específico. Por ejemplo, el selector <code>[href$=".com"]</code>
+            selecciona todos los elementos que tienen el atributo <code>href</code> que termina con el valor
+            <code>.com</code>.
+        </p>
+
+        <pre id="selector-de-atributo-que-termina-con-valor-example">
+<green>[href$=".com"]</green> {
+    <red>color</red>: <green>red</green>;
+}</pre>
+
+        <h3 id="selector-de-atributo-que-inicia-con-valor-y-termina-con-valor">Selector de atributo que inicia con valor
+            y termina con valor</h3>
+
+        <p>
+            El selector de atributo que inicia con valor y termina con valor selecciona todos los elementos que tienen
+            un atributo específico que inicia con un valor específico y termina con un valor específico. Por ejemplo,
+            el selector <code>[href^="https"][href$=".com"]</code> selecciona todos los elementos que tienen el
+            atributo <code>href</code> que inicia con el valor <code>https</code> y termina con el valor
+            <code>.com</code>.
+        </p>
+
+        <pre id="selector-de-atributo-que-inicia-con-valor-y-termina-con-valor-example">
+<green>[href^="https"][href$=".com"]</green> {
+    <red>color</red>: <green>red</green>;
+}</pre>
+
+        <h3 id="selector-de-atributo-que-contiene-valor-y-termina-con-valor">Selector de atributo que contiene valor y
+            termina con valor</h3>
+
+        <p>
+            El selector de atributo que contiene valor y termina con valor selecciona todos los elementos que tienen
+            un atributo específico que contiene un valor específico y termina con un valor específico. Por ejemplo,
+            el selector <code>[href*="google"][href$=".com"]</code> selecciona todos los elementos que tienen el
+            atributo <code>href</code> que contiene el valor <code>google</code> y termina con el valor
+            <code>.com</code>.
+        </p>
+
+        <pre id="selector-de-atributo-que-contiene-valor-y-termina-con-valor-example">
+<green>[href*="google"][href$=".com"]</green> {
+    <red>color</red>: <green>red</green>;
+}</pre>
+
+        <callout>
+            <p>
+                <strong>
+                    Nota:
+                </strong>
+                Aqui puedes encontrar <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors">más
+                    información sobre
+                    selectores de atributo</a> y <a
+                    href="https://developer.mozilla.org/en-US/docs/Web/CSS/Adjacent_sibling_combinator">combinaciones</a>.
+            </p>
+        </callout>
+
     </section>
+
     <section id="propiedades-en-css">
         <h2>Propiedades en CSS</h2>
+
+        <p>
+            Una propiedad es una característica de un elemento que puede ser modificada. Por ejemplo, el color de un
+            elemento puede ser modificado utilizando la propiedad <code>color</code>. Una propiedad puede tener uno o
+            más valores. Por ejemplo, la propiedad <code>color</code> puede tener el valor <code>red</code> o
+            <code>blue</code>.
+        </p>
+
+        <h3 id="propiedades-de-texto">Propiedades de texto</h3>
+
+        <p>
+            Las propiedades de texto modifican el texto de un elemento. Por ejemplo, la propiedad <code>color</code>
+            modifica el color del texto de un elemento. Las propiedades de texto son:
+        </p>
+
+        <ul>
+            <li><code>color</code></li>
+            <li><code>font-family</code></li>
+            <li><code>font-size</code></li>
+            <li><code>font-style</code></li>
+            <li><code>font-weight</code></li>
+            <li><code>letter-spacing</code></li>
+            <li><code>line-height</code></li>
+            <li><code>text-align</code></li>
+            <li><code>text-decoration</code></li>
+            <li><code>text-indent</code></li>
+            <li><code>text-transform</code></li>
+            <li><code>word-spacing</code></li>
+        </ul>
+
+        <h3 id="propiedades-de-fondo">Propiedades de fondo</h3>
+
+        <p>
+            Las propiedades de fondo modifican el fondo de un elemento. Por ejemplo, la propiedad
+            <code>background-color</code>
+            modifica el color de fondo de un elemento. Las propiedades de fondo son:
+        </p>
+
+        <ul>
+            <li><code>background-color</code></li>
+            <li><code>background-image</code></li>
+            <li><code>background-position</code></li>
+            <li><code>background-repeat</code></li>
+            <li><code>background-size</code></li>
+        </ul>
+
+        <h3 id="animaciones">Animaciones</h3>
+
+        <p>
+            Las animaciones son una forma de modificar las propiedades de un elemento de forma gradual. Por ejemplo,
+            puedes animar el color de fondo de un elemento de forma gradual utilizando la propiedad
+            <code>background-color</code>. Un ejemplo de animacion sencilla es:
+
+        </p>
+
+        <pre id="animacion-ejemplo">
+<green>div</green> {
+    <red>background-color</red>: <green>red</green>;
+    <red>transition</red>: <green>background-color</green> <green>2s</green>;
+}
+
+<green>div:hover</green> {
+    <red>background-color</red>: <green>blue</green>;
+}</pre>
+
+        <p>
+            En el ejemplo anterior, el color de fondo de un elemento <code>div</code> cambia de rojo a azul en 2
+            segundos cuando el mouse pasa sobre el elemento.
+        </p>
+
+        <callout>
+            <p>
+                <strong>Nota:</strong> CSS es un lenguaje de programación, por lo que puedes crear animaciones muy
+                complejas. <a
+                    href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations"
+                    target="_blank">Aqui puedes encontrar más información sobre animaciones en CSS</a>.
+            </p>
+        </callout>
+
+        <h3 id="otras-propiedades">Otras propiedades</h3>
+
+        <h3 id="propiedades-de-bordes">Propiedades de bordes</h3>
+
+        <p>
+            Las propiedades de bordes modifican los bordes de un elemento. Por ejemplo, la propiedad
+            <code>border-color</code>
+            modifica el color de los bordes de un elemento. Las propiedades de bordes son:
+        </p>
+
+        <ul>
+            <li><code>border-color</code></li>
+            <li><code>border-style</code></li>
+            <li><code>border-width</code></li>
+        </ul>
+
+        <h3 id="propiedades-de-dimensiones">Propiedades de dimensiones</h3>
+
+        <p>
+            Las propiedades de dimensiones modifican las dimensiones de un elemento. Por ejemplo, la propiedad
+            <code>width</code>
+            modifica el ancho de un elemento. Las propiedades de dimensiones son:
+        </p>
+
+        <ul>
+            <li><code>height</code></li>
+            <li><code>width</code></li>
+        </ul>
+
+        <h3 id="propiedades-de-posicionamiento">Propiedades de posicionamiento</h3>
+
+        <p>
+            Las propiedades de posicionamiento modifican la posición de un elemento. Por ejemplo, la propiedad
+            <code>position</code>
+            modifica la posición de un elemento. Las propiedades de posicionamiento son:
+        </p>
+
+        <ul>
+            <li><code>bottom</code></li>
+            <li><code>left</code></li>
+            <li><code>position</code></li>
+            <li><code>right</code></li>
+            <li><code>top</code></li>
+        </ul>
+
+        <h3 id="propiedades-de-margenes">Propiedades de márgenes</h3>
+
+        <p>
+            Las propiedades de márgenes modifican los márgenes de un elemento. Por ejemplo, la propiedad
+            <code>margin-top</code>
+            modifica el
+            margen superior de un elemento. Las propiedades de márgenes son:
+        </p>
+
+        <ul>
+            <li><code>margin-bottom</code></li>
+            <li><code>margin-left</code></li>
+            <li><code>margin-right</code></li>
+            <li><code>margin-top</code></li>
+        </ul>
+
+        <callout>
+            <p>
+                <strong>Nota:</strong> usando CSS se pueden modificar una gran cantidad de propiedades. <a
+                    href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference#index" target="_blank">Aqui puedes
+                    ver una lista completa de las propiedades en CSS</a>.
+            </p>
+        </callout>
+
+        <important>
+            <p>
+                <strong>⚠️</strong> CSS es un lenguaje con muchos conceptos importantes que
+                se deben conocer para el
+                diseño de una página
+                web compleja (box model, layout, flex, grid, transforms...). <a
+                    href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference" target="_blank">Aqui puedes
+                    encontrar la referencia completa de CSS</a>.
+            </p>
+        </important>
+
     </section>
+
     <section id="buenas-practicas">
         <h2>Buenas prácticas</h2>
 
@@ -356,19 +754,20 @@ fn main() {
             <li>Utiliza técnicas de diseño responsive basadas en móviles.</li>
         </ul>
 
-
-
     </section>
-    <section id="lecturas-adicionales">
-        <h2>Lecturas adicionales</h2>
+    <section id="recursos-adicionales">
+        <h2>Recursos adicionales</h2>
         <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types">Link types</a></li>
             <li><a href="https://www.w3schools.com/HTML/html_lists.asp">HTML lists</a></li>
             <li><a href="https://www.geeksforgeeks.org/html-tags-a-to-z-list/">HTML tags A-to-Z list</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a">&lt;a&gt;: The Anchor element</a>
+            </li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference">CSS reference</a></li>
         </ul>
     </section>
 
-    <div><a href="#top">⬆️</a></div>
+    <div><a href="#top" title="Ir al inicio">⬆️</a></div>
 
 </body>
 
